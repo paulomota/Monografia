@@ -1,0 +1,320 @@
+\documentclass[licenciatura]{cic_unb}
+\usepackage[american,brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx,color}
+
+%% Para facilitar sua visualização, use um editor capaz de colorir as
+%% construções do Tex e do LaTeX.
+%%
+%% Notificação de erros e/ou correções dos mesmos são bem-vindas.
+%% Quando incorporadas a classe, as correções serão devidamente
+%% referenciadas. 
+\title{A Pinga e a Visão 3D}
+
+
+%% Notem a introdução do comando \prof[a] abaixo e do segundo
+%% argumento obrigatório para a filiação do orientador
+
+\orientador[a]{\prof[a] \dr[a] Não Bebe Pouco}{FA/UniLoooonge}
+
+\coorientador[a]{\prof[a] \dr[a] Urubu Não Voa Alto}{RL/UniLooonge}
+
+\coordenador{\prof \dr Sarna Q'Coça}{FD/UniDuniTe}
+
+
+%% Na versão anterior da classe o comando era \mesano{}{} o qual
+%% deixou de existir em favor da forma completa abaixo.
+\diamesano{13}{novembro}{2004}
+
+
+%%% Os comandos membro* captam as informações para a geração dos 
+%%% membros da banca. Essas informações erão usados na folha de rosto 
+%%% e na folha de aprovação. Lembre que o orientador é membro da banca
+%%% e que as bancas podem ter de três a quatro membros; o quarto
+%%% membro é opcional. Falta, entretanto, implementar a entrada do
+%%% quarto elemento na folha de aprovação.
+
+
+
+\membroum{\prof \dr Pentelho da Silva}{SIC/UniDuniTe}
+\membrodois{\prof \dr Xato Pra Caramba}{FAU/COSN}%Centro 
+				%Universitário São  Nunca!
+%\membrotres{\prof MsC. Outro Q D'Sono}{FU/PindaHiba}
+
+%\cipauthor{Maria dos Santos}{Surda}%Use esta forma se único autor.
+\cipauthor[João José][Falante]{Maria dos Santos}{Surda}
+    %% O comando acima capta os elementos
+    %% necessários para caracterizar o(s) nome(s) do(s) autor(es)
+    %% na capa  e na catalogação na publicação CIP;
+    %% <comando LaTeX ``\author'' se torna desnecessário>
+
+
+%%Notem a mudança no nome do comando e a utilização do mesmo. Agora
+%%   o comando segue as convenções do LaTeX. Mudança realizada por
+%%   Flávio Maico Costa. 
+\palavraschave{PNE, Libras, LSB,  gramáticas,  tradução}
+
+\keywords{keyword  keyworkeywor  keywordkeywordkeywordkeywordkeywordkeyword
+  one, keyword two, kw three, kw four, a very very very long kw five }
+
+
+\begin{document}
+
+
+\capa        %% produz a capa
+\contracapa  %% produz a contra-capa (folha de rosto)
+%\capas      %% produz a capa e a contra-capa.
+
+\folhaaprovacao %% produz a folha de aprovação
+
+%% O ambiente a seguir produz uma página não numerada onde você pode
+%% dedicar o seu trabalho a quem lhe for relevante.
+
+\begin{dedicatoria}
+Dedico este trabalho aos meus pais por sempre terem me incentivado no
+caminho bla bla bla \ldots
+\end{dedicatoria}
+
+
+%% O ambiente a seguir produz uma página não numerada onde você pode
+%% agradecer  a quem lhe for relevante pelo suporte, carinho,
+%% incentivo, colaboração, enfim tudo que não couber numa dedicatória.
+
+\begin{agradecimentos}
+Agradeço ao Prof. Dr. \ldots
+
+
+
+Agradeço  aos colegas \emph{fulano de  tal} e \emph{Beltrano
+  de   Sousa}  por   terem  me   mostrado  onde   o   programa  estava
+  errado. \ldots %% Notem que a ênfase realizada pelo comando
+%%  ``\emph{}'' não faz sentido quando aplicado a nomes próprios. O
+%%    seu papel neste texto é ressaltar onde devem aparecer os nomes das
+%%    pessoas. 
+
+\end{agradecimentos}
+
+%%  A ABNT impõe como norma o resumo em língua nativa precedendo, em
+%%  página distinta, o resumo em língua estrangeira. Os DOIS resumos
+%%  são OBRIGATÓRIOS.
+
+\begin{resumo}
+Neste trabalho final de graduação estudamos o problema de como enrolar
+os professores para obter um canudo e mudar a situação funcional dos
+autores. Para tanto empregamos a clássica enrolação e bajulação que
+surtiram os resultados desejados. BLA BLA BLA BLA etc.....
+\end{resumo}
+
+
+
+%%% Este é o resumo em inglês. Lembrem que ferramentas de tradução
+%%% automática costumam produzir excelentes risadas!
+\selectlanguage{american}
+\begin{abstract}
+This is a bullshit trying to cheat whoever is reading it right
+now. However, the reader is always welcome to laugh at the face \ldots
+\end{abstract}
+\selectlanguage{brazil}
+
+%% Os sumários são os próximos elementos do documento. Dependendo da
+%% situação você pode escolher uma das opções abaixo. Não esqueça que
+%% o símbolo ``%'' indica um comentário para o \TeX e o \LaTeX.
+
+%\sumario         %% use esta forma se seu trabalho NÃO contiver figuras 
+                  %%  NEM tabelas.
+%\sumario\figuras %% use esta forma se seu trabalho contiver figuras
+                  %% E NÃO contiver tabelas.
+%\sumario\tabelas %% use esta forma se seu trabalho contiver tabelas 
+                  %% E NÃO contiver figuras.
+%\sumarios        %% use esta forma se seu trabalho contiver figuras e
+                  %% tabelas.
+
+%% A bem da verdade, a ABNT normatiza o uso de ``p.'' precedendo o
+%% número da página. Mas o resultado estético disso é tão feio, mas
+%% tão feio, que eu resolvi não implementar tal atrocidade. Para 
+%% aqueles audazes que quiserem ver a coisa feia, editem o arquivo de
+%% classe mudando o comando 
+%%
+%%   \renewcommand\addcontentsline[3]{%
+%%      \addtocontents{#1}{\protect\contentsline{#2}{#3}{\thepage}}}
+%%
+%% para 
+%%
+%%   \renewcommand\addcontentsline[3]{%
+%%      \addtocontents{#1}{\protect\contentsline{#2}{#3}{p.\thepage}}}
+%%
+
+\sumario\figuras
+
+
+%% Bem, os livros que andam por aí falam muita besteira,
+%% principalmente no que se refere a numeração das páginas e as
+%% referências bibliográficas. O fato é que TODAS as páginas são
+%% contadas sequencialmente desde a capa. A numeração usada é a
+%% arábica mas somente a partir da primeira página do primeiro
+%% capítulo. Tudo o que preceder NÃO é numerado (esqueçam a bobagem da
+%% numeração romana que alguns livros falam.)
+
+%% Quanto a questão das referências bibliográficas, o padrão ABNT
+%% permite a seqüência numérica. Contudo, a padronização ditada é a
+%% mais horrorosa que eu já vi! Me parece que eles normatizaram a
+%% incapacidade técnica de ferramentas (e principlamente, usuários
+%% dessas ferramentas)do tipo WYSIWYG. 
+
+%% Se quiserem entradas esteticamente belas, usem o padrão do
+%% LaTeX. Mas se quiserem aderir a coisa HORROROSA da ABNT, instalem
+%% os pacotes de estilo e bibliografia abntex, disponíveis em formato
+%% RPM DEB TGZ. Miores informações, consultem o site 
+%% http://abntex.codigolivre.org.br  
+
+
+\chapter{Introdução}
+\label{cap1}
+
+
+Este muito  provavelmente será o primeiro capítulo.  Mas dependendo da
+situação, pode ser que o seu  orientador ou a banca peçam para inserir
+outro capítulo antes deste.  Neste caso, tudo o que voce tem a fazer e
+escrever  o novo  capítulo antes  deste. O  sistema se  encarregará de
+numerar tudo  direitinho através do  documento. Um exemplo  disso pode
+ser visto através da seguinte  experiência: corte tudo que se encontra
+entre o  ``\verb+\chapter{Nome do capítulo}+'' e  a próxima ocorrência
+de     um    ``\verb+\chapter{}+''    que     neste    caso     é    o
+``\verb+\chapter{A Solução}+''. Pule uns poucos \verb+\chapter+ e cole
+o que você recortou.  Compile  o documento umas duas vezes (mandatório
+para resolução  das referências simbólicas) e veja  o resultado.  Nada
+de re-enumerar nadinha de nada!
+
+Ah,   você    está   curioso   sobre   a   linha    logo   abaixo   do
+``\verb+\chapter{Nome do capítu+\-\verb+lo}+''   acima?   Ali   nós
+introduzimos  um rótulo  simbólico para  este capítulo.   Referência a
+este   capítulo    via   rótulo   pode    ser   vista   na\label{past}
+página~\pageref{magica} da seção~\ref{promessa}.
+%% Neste capítulo mostramos exemplos de como referenciar outras seções
+%% e páginas. Vide as duas linhas acima.
+
+
+\chapter{Nome do Segundo Capítulo}
+
+Neste   capítulo  mostramos   como  o   problema  descrito   pode  ser
+resolvido.  A solução  é consequência  do Teorema  de  LeArquitetô que
+atesta  que o  ser humano  é capaz  de viver  e trabalhar  em qualquer
+buraco. Evidências para  isso são numerosas e não  precisamos ir longe
+para \ldots
+
+
+
+
+\chapter{A Metodologia Empregada}
+
+A metodologia empregada é caracterizada \ldots
+
+\section{Referência ao capítulo~\ref{cap1} página~\pageref{past}}
+\label{promessa}
+
+
+Nesta seção vamos cumprir o prometido no \label{magica}
+capítulo~\ref{cap1} página~\pageref{past}.
+
+\subsection{subseção}
+
+
+\chapter{Capítulo com duas figuras}
+
+
+\begin{figure}[h]
+\centering%
+\includegraphics[scale=.3]{pinto.eps}
+\caption{Filhote de galinha.}
+\label{pinto}
+\end{figure}
+
+
+Neste capítulo vamos mostrar como inserir figuras e fazer referência a
+elas.  Nosso primeiro  exemplo, Fig.~\ref{pinto},  mostra um  pinto de
+pé. Notem que  a figura está centralizada e sofreu  uma redução no seu
+tamanho. Qualquer  fator de escalonamento  é a princípio  possível mas
+tenha sempre  em mente as dimensões  do papel onde a  mesma deve estar
+incluída.
+
+Outros parâmetros  são possíveis e uma página  interessante sobre isso
+é
+
+\hfil{\color[rgb]{0,0,1}\texttt{http://www.comp.leeds.ac.uk/andyr/misc/latex/}}\hfil
+
+\noindent itens 5 e  6. Seguindo o item 5 você verá  como o pinto pode
+ser manipulado  das mais variadas  e criativas maneiras.   Aliás, essa
+URL  leva a  um tutorial  muito instrutivo  do uso  \LaTeX{} incluindo
+exemplos.
+
+A Fig.~\ref{pinto} pode ser vista na página~\pageref{pinto} enquanto o
+logo da UnB pode ser vista na página~\pageref{unb}, Fig.~\ref{unb}.
+
+
+\begin{figure}
+\centering%
+\includegraphics[scale=.5]{unb_logo.eps}
+\caption{Logo da UnB.}
+\label{unb}
+\end{figure}
+
+Neste ponto  eu vou  forçar a quebra  de página  só pra poder  fazer a
+próxima experiência  sem que vocês  tenham que ler  muita lenga-lenga.
+\textcolor{red}{\textbf{\large Por favor,  só façam quebras explícitas
+por alguma muito boa razão.}}
+\newpage
+
+Vamos agora encher um pouco de lingüiça mostrando como a figura flutua
+no texto através  das páginas. Veja o que ocorre  se você remover este
+paragráfo, mas apenas este. O que aconteceu com a figura?
+
+\begin{figure}
+\centering%
+\includegraphics[scale=.75,angle=180]{pinto.eps}
+\caption{Pinto-aranha andando no teto.}
+\label{teto}
+\end{figure}
+
+\chapter{Só pra aumentar outra página}
+\section{Pra dar uma estrutura ao sumário}
+
+\chapter{Só pra aumentar mais outra página}
+
+
+\chapter{Último capítulo}
+
+Neste capítulo vamos mostrar como fazer as citações a outros
+trabalhos. A isso se dá o nome de referências (bibliográficas).
+
+A idéia chave é que um pesquisador trabalha ao longo dos anos em
+alguns assuntos e com isso construiu uma base de dados
+bibliográfica. Essa base de dados bibliográfica armazena as
+informações sobre artigos em jornais, conferências, etc. 
+Todas as entradas são devidamente indexadas por referências simbólicas
+as quais são usadas pelo comando \verb+\cite{chave-simbólica}+ dentro
+do texto. Dessa forma, apenas os trabalhos citados através do comando 
+\verb+\cite{chave-simbólica}+ serão incluídos no texto. Não como errar
+nesse processo (é claro que você pode se enganar no uso da chave
+simbólica e nesse caso uma outra obra será referenciada.).
+
+Neste parágrafo vou  referenciar alguns trabalhos. Em \cite{natasha96}
+e  \cite{keenan}  podemos  encontrar  referência a  \cite{grosto91}  e
+\cite{bill2k1}. Todos esses trabalhos são referenciados no mais
+simples dos estilos que é o da numeração entre colchetes (esilo
+plain). Outras modalidades são possíveis e seria interessante que
+vocês dessem uma olhada no pacote \LaTeX{} chamado \texttt{natbib}.
+
+Com  isso finalizo este  auto-documento esqueleto/exemplo.  Para casos
+envolvendo  matemática vejam  o outro  exemplo \cite{formigas},  o das
+``formigas na  web'' (que eu  não vou incluir  na minha base  de dados
+bibliográfica por ser apenas um exemplo.) 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{esqueleto} 
+\bibliographystyle{plain}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
+

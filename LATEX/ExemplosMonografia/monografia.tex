@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Universidade de Brasília - UnB
+%Instituto de Ciências Exatas
+%Departamento de Ciência da Computação - CiC
+%
+%Monografia de conclusão de curso
+%Curso: Computação 
+%Semestre: 1/2009
+%
+%Aluno: Paulo Roberto Mota (05/37489)
+%Aluno: Jefferson dos Santos Motta Júnior (05/?????)
+%
+%Orientadora: Maria de Fátima
+%
+%Área: Mobile Learning e Avaliação
+%
+%Tema: A definir
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[licenciatura]{cic_unb}
+\usepackage[english,brazil]{babel} %hifenação em português e inglês
+\usepackage[T1]{fontenc} %caracteres acentuados
+\usepackage[latin1]{inputenc}
+\usepackage{newcent} %fonte New Century
+\usepackage{natbib}%% trabalha as referências bibliográficas
+\usepackage{url}%% trabalha endereços WEB.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%definições prévias do documento
+\title{Mobile Learning}
+
+\orientador{\prof[a] Maria de Fátima}{CIC/UnB}
+\coordenador{\prof Flávio Moura}{CIC/UnB}
+
+\diamesano{13}{abril}{2009}
+
+\membroum{\prof Marco Aurélio de Carvalho}{CIC/UnB}
+\membrodois{\prof[a] Ana Cristina Santos Moreira}{CIC/UnB}
+
+\cipauthor[Jefferson dos Santos][Motta]{Paulo Roberto}{Mota}
+
+\palavraschave{Aprendizado Móvel, Mobile Learning, M-learning, dispositivos móveis, cenários de avaliação com dispositivos móveis, avaliação de aprendizagem, Ensino à distância, EAD}
+\keywords{Mobile Learning, M-learning}
+
+
+
+%começo do documento
+\begin{document}
+
+\capas  %% produz a capa e a contra-capa.
+%\contracapa %% folha de rosto
+%\folhaaprovacao
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGRADECIMENTOS																						  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%pessoas da familia em geral
+%\begin{dedicatoria}
+%Dedicamos este trabalho para todas as pessoas que de alguma forma contribuiram para sua realiação. 
+%\end{dedicatoria}
+
+%pessoas envolvidas com o trabalho
+%\begin{agradecimentos}
+%A todos que tornam possível a conclusão  deste trabalho, em particular
+%à \prof[a] Maria de Fátima pelas  instruções  a respeito  do processo de pesquisa, na ajuda de delimitação do nosso %tema e pelo entusiamos demonstrado desde o início em trabalhar conosco neste projeto.
+%\end{agradecimentos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESUMO																								  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{resumo}
+%Ainda precisamos escrever nosso resumo
+%\end{resumo}
+
+%\selectlanguage{american}
+%\begin{abstract}
+%We need to write about this
+%\end{abstract}
+%\selectlanguage{brazil}
+
+%\tableofcontents
+%\listoffigures
+%\sumarios
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CAPÍTULOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{1_introducao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Conteúdo visto em sala - Criando tabelas em LATEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Trabalhando com Tabelas}
+\begin{table}[htbp] %h = here, t = top, b = botton, p = ?
+\begin{center}
+	\begin{tabular}{llcr} %left, left, center, right
+		Item   & Preço unitário & Valor	\\ \hline
+		Soja   & R\$ 1,50       & R\$ 7,50 \\
+		Feijão & R\$ 2,00      & R\$ 20,00\\ \hline 
+	\end{tabular}
+\end{center}
+\caption{Exemplo de uma tabela simples.}
+\label{tab1}
+\end{table}
+
+
+%%%%AMBIENTE MATEMATICO
+The solution to $\sqrt{x} = 5$ is $x = 25$    %%continua na mesma linha
+
+The solution to \[\sqrt{x} = 5\] is \[x = 25\] %%quebra a linha
+
+\begin{equation}
+2+2=4
+\label{equal}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAFIA																							          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plain}
+\bibliography{nlp}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

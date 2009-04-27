@@ -1,0 +1,6 @@
+\select@language {brazil}
+\select@language {american}
+\select@language {brazil}
+\contentsline {starchapter}{Lista de Figuras}{9}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {1}Introdu\c c\~ao}{10}
+\contentsline {chapter}{Cap\'{\i }tulo\ \numberline {2}Trabalhando com Tabelas}{12}
